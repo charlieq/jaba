@@ -133,6 +133,10 @@ enum BackgroundRefresh {
     static func schedule() async {
         let request = BGAppRefreshTaskRequest(identifier: identifier)
         request.earliestBeginDate = .now.addingTimeInterval(30 * 60)
-        try? await BGTaskScheduler.shared.submitTaskRequest(request)
+        if #available(iOS 27, *) {
+            try? await BGTaskScheduler.shared.submitTaskRequest(request)
+        } else {
+            try? BGTaskScheduler.shared.submit(request)
+        }
     }
 }
