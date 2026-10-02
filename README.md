@@ -1,6 +1,6 @@
 # JABA: Julie's Aurora Borealis App
 
-A native iPhone app (SwiftUI, iOS 27) that answers one question for any place you
+A native iPhone app (SwiftUI, iOS 26+) that answers one question for any place you
 save: **should I get out of the tent tonight to see the northern lights?**
 
 Each location gets a **0–100 score** and a **GO / MAYBE / NO** verdict, the
